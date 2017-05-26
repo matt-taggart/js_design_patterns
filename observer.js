@@ -3,7 +3,7 @@ const Applicant = function(name) {
 };
 
 Applicant.prototype.notify = function(jobPosting) {
-  console.log(`Applicant ${this.name} notified of ${jobPosting} job opening! `);
+  console.log(`Applicant ${this.name} notified of ${jobPosting} job opening!`);
 };
 
 const EmailService = function() {
