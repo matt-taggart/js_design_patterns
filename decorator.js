@@ -1,4 +1,4 @@
-var Task = function (name) {
+const Task = function (name) {
   this.name = name;
   this.completed = false;
 }
@@ -11,11 +11,11 @@ Task.prototype.save = function() {
   console.log('saving task ', this.name);
 }
 
-var myTask = new Task('Legacy task');
+const myTask = new Task('Legacy task');
 myTask.complete();
 myTask.save();
 
-var UrgentTask = function(name, priority) {
+const UrgentTask = function(name, priority) {
   Task.call(this, name);
   this.priority = priority;
 }
@@ -31,10 +31,9 @@ UrgentTask.prototype.save = function() {
   Task.prototype.save.call(this);
 }
 
-var ut = new UrgentTask('This is urgent', 1);
+const ut = new UrgentTask('This is urgent', 1);
 ut.complete();
 ut.save();
-console.log(ut);
 
 
 
