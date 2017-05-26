@@ -19,7 +19,7 @@ const FlyweightFactory = (function FlyweightFactory() {
   const getCount = function() {
     let count = 0;
 
-    for (var f in flyweights)  {
+    for (let f in flyweights)  {
       count++;
     }
 
@@ -66,7 +66,7 @@ const tasks = new TaskCollection();
 const projects = ['none', 'courses', 'training', 'project'];
 const priorities = [1, 2, 3, 4, 5];
 const users = ['Jon', 'Erica', 'Amanda', 'Nathan'];
-const completed = [true, false];
+const completed = [ true, false ];
 
 const initialMemory = process.memoryUsage().heapUsed;
 
